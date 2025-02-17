@@ -10,7 +10,7 @@ const graves = new THREE.Group();
 for (let i = 0; i < 50; i++) {
   const angle = Math.random() * Math.PI * 2;
 
-  const radius = 3 + Math.random() * 7;
+  const radius = 3 + Math.random() * 6;
 
   const x = Math.sin(angle) * radius;
   const z = Math.cos(angle) * radius;
