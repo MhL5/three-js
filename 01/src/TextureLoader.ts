@@ -2,6 +2,7 @@ import * as THREE from "three";
 
 const textureLoader = new THREE.TextureLoader();
 
+// door
 export const doorColorTexture = textureLoader.load("/textures/door/color.jpg");
 export const doorAlphaTexture = textureLoader.load("/textures/door/alpha.jpg");
 export const doorAmbientOcclusionTexture = textureLoader.load(
@@ -18,4 +19,18 @@ export const doorMetalnessTexture = textureLoader.load(
 );
 export const doorRoughnessTexture = textureLoader.load(
   "/textures/door/roughness.jpg"
+);
+
+// walls
+export const bricksColorTexture = textureLoader.load(
+  "/textures/bricks/color.jpg"
+);
+export const bricksAmbientOcclusionTexture = textureLoader.load(
+  "/textures/bricks/ambientOcclusion.jpg"
+);
+export const bricksNormalTexture = textureLoader.load(
+  "/textures/bricks/normal.jpg"
+);
+export const bricksRoughnessTexture = textureLoader.load(
+  "/textures/bricks/roughness.jpg"
 );
