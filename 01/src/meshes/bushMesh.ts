@@ -9,7 +9,7 @@ type BushesData = {
 const bushWHD = [1, 16, 16];
 
 const geometry = new THREE.SphereGeometry(...bushWHD);
-const material = new THREE.MeshBasicMaterial({ color: "#89c854" });
+const material = new THREE.MeshStandardMaterial({ color: "#89c854" });
 
 const bushesData: BushesData = [
   {
