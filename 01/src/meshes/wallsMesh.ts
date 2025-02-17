@@ -5,6 +5,7 @@ import {
   bricksNormalTexture,
   bricksRoughnessTexture,
 } from "../TextureLoader";
+import { setUV2Attribute } from "../utils/setUV2Attribute";
 
 const wallsWHD = [4, 2.5, 4];
 const walls = new THREE.Mesh(
@@ -17,10 +18,8 @@ const walls = new THREE.Mesh(
   })
 );
 // aoMap
-walls.geometry.setAttribute(
-  "uv2",
-  new THREE.Float32BufferAttribute(walls.geometry.attributes.uv.array, 2)
-);
+setUV2Attribute(walls);
+
 walls.position.y = wallsWHD[1] / 2;
 
 export { wallsWHD };

@@ -7,6 +7,7 @@ import {
   doorNormalTexture,
   doorRoughnessTexture,
 } from "../TextureLoader";
+import { setUV2Attribute } from "../utils/setUV2Attribute";
 import { wallsWHD } from "./wallsMesh";
 import * as THREE from "three";
 
@@ -33,10 +34,7 @@ const door = new THREE.Mesh(
   })
 );
 // aoMap
-door.geometry.setAttribute(
-  "uv2",
-  new THREE.Float32BufferAttribute(door.geometry.attributes.uv.array, 2)
-);
+setUV2Attribute(door);
 door.position.y = doorWH[1] / 2 - 0.1;
 door.position.z = wallsWHD[2] / 2 + 0.01;
 
